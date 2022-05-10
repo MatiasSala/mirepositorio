@@ -1,0 +1,173 @@
+$rojo: #f50537;
+$azul: #079ed9;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;;
+}
+
+.navbar {
+    font-size: 24px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: $azul;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: $rojo;
+}
+
+.container{
+    margin: 1rem;
+    width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $rojo;
+    border-color: $rojo;
+}
+
+.btn-primary:hover {
+    background-color: $azul;
+    border-color: $azul;
+}
+.card {
+    filter: grayscale(0%);
+}
+
+.card:hover {
+    filter: grayscale(100%);
+}
+
+#compra {
+    filter: grayscale(100%);
+}
+
+#compra:hover {
+    filter: grayscale(0%);
+}
+
+.row {
+    margin-top: 1.2rem;
+}
+
+footer { background-color: #b3b3b3;
+    margin-top: 1.5rem;
+    padding: 2rem
+}
+
+footer p {
+    color:#000;
+    font-weight: 400;
+    text-align: center;
+}
+
+.fa-whatsapp {
+    color: #fff;
+    background-color: #3ec34f;
+    padding: 0.6rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 3%;
+    position: fixed
+}
+
+h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: $rojo;
+    text-decoration: underline dotted $azul 3px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.formContainer{
+    width: 75%;
+    margin: 3rem auto;
+    border: $azul solid 2 px;
+    padding: 1.5rem 1 rem;
+    border-radius: 0.5rem;
+}
+
+.form{
+text-align: center;
+}
+
+.form__label{
+    display: inline-block;
+    width: 60%;
+    font-weight: 400;
+    text-align: start;
+}
+
+.form__input, .form__textarea{
+    width: 60%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: $azul solid 1px;
+    font-family: 'League Spartan', sans-serif ;
+}
+
+.form__textarea{
+    height: 5rem;
+    resize: none;
+}
+
+.form__input:focus, .form__textarea:focus{
+    outline: none;
+}
+
+.form__input--submit{
+    background-color: $rojo;
+    color: #fff;
+    margin-top: 1.5rem ;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 0.3rem;    
+}
+
+.form__input--submit:hover{
+    background-color: $azul;
+    color: #000;
+}
+
+.conocenos{
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.conocenos__container{
+    display: grid;
+    grid-template-columns: 30% auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.conocenos__img{
+    width: 100%;
+}
+
+@media screen and (max-width: 560px) {
+    .conocenos__container {
+      grid-template-columns: 100%;
+    }
+  }

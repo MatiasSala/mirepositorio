@@ -4,11 +4,11 @@
 }
 
 body {
-  font-family: "League Spartan", sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 .navbar {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
@@ -27,28 +27,22 @@ body {
 .btn-primary {
   color: #fff;
   background-color: #f50537;
-  border-color: #f50537;
+  border: #f50537 solid 1px;
 }
 
 .btn-primary:hover {
   background-color: #079ed9;
-  border-color: #079ed9;
+  border: #079ed9 solid 1px;
 }
 
-.card {
-  filter: grayscale(0%);
+.card, #compra {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
-.card:hover {
-  filter: grayscale(100%);
-}
-
-#compra {
-  filter: grayscale(100%);
-}
-
-#compra:hover {
-  filter: grayscale(0%);
+.card:hover, #compra:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .row {
@@ -81,32 +75,30 @@ footer p {
 h1 {
   font-size: 1.8rem;
   font-weight: 600;
-  text-align: center;
   color: #f50537;
-  text-decoration: underline dotted #079ed9 3px;
+  -webkit-text-decoration: underline dotted #079ed9 3px;
+          text-decoration: underline dotted #079ed9 3px;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 400;
-  text-align: center;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: 200;
-  text-align: center;
 }
 
 .formContainer {
   width: 75%;
   margin: 3rem auto;
-  border: #079ed9 solid 2 px;
+  border: #079ed9 solid 2px;
   padding: 1.5rem 1 rem;
   border-radius: 0.5rem;
 }
 
-.form {
+.form, h1, h2, h3 {
   text-align: center;
 }
 
@@ -123,7 +115,7 @@ h3 {
   padding: 0.5rem;
   border: none;
   border-bottom: #079ed9 solid 1px;
-  font-family: "League Spartan", sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 .form__textarea {
@@ -155,10 +147,15 @@ h3 {
 }
 
 .conocenos__container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 30% auto;
-  align-items: center;
-  column-gap: 2rem;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
 }
 
 .conocenos__img {
@@ -167,8 +164,8 @@ h3 {
 
 @media screen and (max-width: 560px) {
   .conocenos__container {
-    grid-template-columns: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
   }
 }
-
 /*# sourceMappingURL=estilos.css.map */

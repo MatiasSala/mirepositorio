@@ -1,5 +1,9 @@
 $rojo: #f50537;
 $azul: #079ed9;
+$font-sizes: ("sm":1.2rem, "me":1.5rem, "la":1.8rem, "xl":2rem);
+@mixin border ($color, $width) {
+    border: $color solid $width;
+}
 
 *{
     margin: 0;
@@ -11,7 +15,7 @@ body{
 }
 
 .navbar {
-    font-size: 24px;
+    font-size:  map-get($font-sizes, "me");
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
@@ -30,12 +34,12 @@ body{
 .btn-primary {
     color: #fff;
     background-color: $rojo;
-    border-color: $rojo;
+    @include border($rojo, 1px);
 }
 
 .btn-primary:hover {
     background-color: $azul;
-    border-color: $azul;
+    @include border($azul, 1px);
 }
 .card {
     filter: grayscale(0%);
@@ -46,11 +50,11 @@ body{
 }
 
 #compra {
-    filter: grayscale(100%);
+    @extend .card;
 }
 
 #compra:hover {
-    filter: grayscale(0%);
+    @extend .card:hover;
 }
 
 .row {
@@ -72,7 +76,7 @@ footer p {
     color: #fff;
     background-color: #3ec34f;
     padding: 0.6rem;
-    font-size: 2rem;
+    font-size: map-get($font-sizes, "xl");
     border-radius: 50%;
     bottom: 5%;
     right: 3%;
@@ -80,29 +84,29 @@ footer p {
 }
 
 h1{
-    font-size: 1.8rem;
+    @extend .form;
+    font-size: map-get($font-sizes, "la");
     font-weight: 600;
-    text-align: center;
     color: $rojo;
     text-decoration: underline dotted $azul 3px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    @extend .form;
+    font-size: map-get($font-sizes, "me");
     font-weight: 400;
-    text-align: center;
 }
 
 h3 {
-    font-size: 1.2rem;
+    @extend .form;
+    font-size: map-get($font-sizes, "sm");
     font-weight: 200;
-    text-align: center;
 }
 
 .formContainer{
     width: 75%;
     margin: 3rem auto;
-    border: $azul solid 2 px;
+    @include border($azul, 2px );
     padding: 1.5rem 1 rem;
     border-radius: 0.5rem;
 }
@@ -171,3 +175,4 @@ text-align: center;
       grid-template-columns: 100%;
     }
   }
+

@@ -1,6 +1,6 @@
 $rojo: #f50537;
 $azul: #079ed9;
-$font-sizes: ("sm":1.2rem, "me":1.5rem, "la":1.8rem, "xl":2rem);
+$font-sizes: ("xs":1rem, "sm":1.2rem, "me":1.5rem, "la":1.8rem, "xl":2rem);
 @mixin border ($color, $width) {
     border: $color solid $width;
 }
@@ -26,6 +26,7 @@ body{
     color: $rojo;
 }
 
+
 .container{
     margin: 1rem;
     width: 100%;
@@ -43,6 +44,7 @@ body{
 }
 .card {
     filter: grayscale(0%);
+    margin-top: 1rem;
 }
 
 .card:hover {
@@ -172,7 +174,14 @@ text-align: center;
 
 @media screen and (max-width: 560px) {
     .conocenos__container {
-      grid-template-columns: 100%;
+    grid-template-columns: 100%;
     }
-  }
+}
 
+.link_contacto {
+    color: #000;
+    font-family: 'League Spartan', sans-serif;;
+    font-size: map-get($font-sizes, "xs");
+    font-weight: 200;
+    text-decoration: none;
+}

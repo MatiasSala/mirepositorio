@@ -38,6 +38,7 @@ body {
 .card, #compra {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+  margin-top: 1rem;
 }
 
 .card:hover, #compra:hover {
@@ -167,5 +168,13 @@ h3 {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
+}
+
+.link_contacto {
+  color: #000;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  text-decoration: none;
 }
 /*# sourceMappingURL=estilos.css.map */
